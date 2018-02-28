@@ -2129,7 +2129,7 @@ class Project(object):
     if os.path.exists(dstPath):
       os.remove(dstPath)
 
-    cmd = ['curl', '--fail', '--output', tmpPath, '--netrc', '--location']
+    cmd = ['curl', '-k', '--fail', '--output', tmpPath, '--netrc', '--location']
     if quiet:
       cmd += ['--silent']
     if os.path.exists(tmpPath):
